@@ -30,13 +30,16 @@ function App() {
         if (account === null) {
             return (
                 <div className="App">
-                    { 
-                        isWalletInstalled ? (
-                            <button onClick={connectWallet}>Connect Wallet</button>
-                        ) : (
-                            <p>Install Metamask wallet</p>
-                        )
-                    }
+                  <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                      { 
+                          isWalletInstalled ? (
+                              <button onClick={connectWallet}>Connect Wallet</button>
+                          ) : (
+                              <p>Install Metamask wallet</p>
+                          )
+                      }
+                  </header>
                 </div>
              );
          }
